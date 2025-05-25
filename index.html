@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evolournal - 技术支持</title>
+    <title>Evolournal - Technical Support</title>
     <style>
         * {
             margin: 0;
@@ -23,6 +23,38 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+        }
+        
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 8px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .language-switcher button {
+            background: none;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .language-switcher button.active {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .language-switcher button:hover:not(.active) {
+            background: rgba(102, 126, 234, 0.1);
         }
         
         .header {
@@ -134,6 +166,14 @@
             margin-top: 30px;
         }
         
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
         @media (max-width: 600px) {
             .container {
                 padding: 10px;
@@ -146,84 +186,210 @@
             .content {
                 padding: 20px;
             }
+            
+            .language-switcher {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 20px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="language-switcher">
+        <button onclick="switchLanguage('en')" id="btn-en" class="active">English</button>
+        <button onclick="switchLanguage('zh')" id="btn-zh">中文</button>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <div class="logo">E</div>
-            <h1>Evolournal</h1>
-            <p class="subtitle">智能日记应用 - 技术支持</p>
-        </div>
-        
-        <div class="content">
-            <h2>📱 关于 Evolournal</h2>
-            <p>Evolournal 是一款智能日记应用，帮助用户记录生活点滴，追踪情绪变化，并通过智能分析提供个人成长洞察。我们致力于为用户提供最佳的日记记录体验。</p>
-        </div>
-        
-        <div class="content">
-            <h2>❓ 常见问题</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">如何开始使用 Evolournal？</div>
-                <div class="faq-answer">下载应用后，您可以直接开始写日记。应用会引导您完成初始设置，包括选择主题和设置提醒。</div>
+        <!-- English Content -->
+        <div id="content-en" class="lang-content active">
+            <div class="header">
+                <div class="logo">E</div>
+                <h1>Evolournal</h1>
+                <p class="subtitle">Smart Journaling App - Technical Support</p>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">我的数据安全吗？</div>
-                <div class="faq-answer">是的，我们非常重视您的隐私。所有日记数据都存储在您的设备上，并可选择性地同步到您的 iCloud 账户。我们不会访问或存储您的个人日记内容。</div>
+            <div class="content">
+                <h2>📱 About Evolournal</h2>
+                <p>Evolournal is a smart journaling app that helps users record life moments, track emotional changes, and provides personal growth insights through intelligent analysis. We are committed to providing the best journaling experience for our users.</p>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">如何备份我的日记？</div>
-                <div class="faq-answer">应用支持 iCloud 自动备份。您也可以在设置中手动导出日记数据。</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">应用支持哪些设备？</div>
-                <div class="faq-answer">Evolournal 支持 iOS 15.0 及以上版本的 iPhone 和 iPad。</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">如何联系技术支持？</div>
-                <div class="faq-answer">您可以通过下方的联系方式与我们取得联系，我们会在24小时内回复您的问题。</div>
-            </div>
-        </div>
-        
-        <div class="content">
-            <h2>📞 联系我们</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <h3>邮箱支持</h3>
-                    <p>nataliexx07@163.com</p>
-                    <a href="mailto:nataliexx07@163.com" class="btn">发送邮件</a>
+            <div class="content">
+                <h2>❓ Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I get started with Evolournal?</div>
+                    <div class="faq-answer">After downloading the app, you can start journaling right away. The app will guide you through the initial setup, including choosing themes and setting reminders.</div>
                 </div>
                 
-                <div class="contact-item">
-                    <div class="contact-icon">💬</div>
-                    <h3>在线反馈</h3>
-                    <p>通过应用内反馈功能</p>
-                    <a href="#" class="btn">应用内反馈</a>
+                <div class="faq-item">
+                    <div class="faq-question">Is my data secure?</div>
+                    <div class="faq-answer">Yes, we take your privacy very seriously. All journal data is stored on your device and can optionally sync to your iCloud account. We do not access or store your personal journal content.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How can I backup my journal?</div>
+                    <div class="faq-answer">The app supports automatic iCloud backup. You can also manually export your journal data in the settings.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What devices are supported?</div>
+                    <div class="faq-answer">Evolournal supports iPhone and iPad running iOS 15.0 or later.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I contact technical support?</div>
+                    <div class="faq-answer">You can reach us through the contact methods below, and we will respond to your questions within 24 hours.</div>
                 </div>
             </div>
+            
+            <div class="content">
+                <h2>📞 Contact Us</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email Support</h3>
+                        <p>nataliexx07@163.com</p>
+                        <a href="mailto:nataliexx07@163.com" class="btn">Send Email</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <h3>In-App Feedback</h3>
+                        <p>Use the feedback feature in the app</p>
+                        <a href="#" class="btn">App Feedback</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h2>📋 Privacy Policy</h2>
+                <p>We are committed to protecting your privacy. All data collected by Evolournal is used solely to improve the app experience and will not be shared with third parties. For detailed privacy policy, please refer to the relevant pages within the app.</p>
+            </div>
+            
+            <div class="content">
+                <h2>🔄 Version Updates</h2>
+                <p>We regularly update the app to fix issues and add new features. Please ensure you are using the latest version of Evolournal for the best experience.</p>
+            </div>
+            
+            <div class="footer">
+                <p>&copy; 2024 Evolournal. All rights reserved.</p>
+                <p>Thank you for choosing Evolournal, let's record beautiful life together!</p>
+            </div>
         </div>
-        
-        <div class="content">
-            <h2>📋 隐私政策</h2>
-            <p>我们承诺保护您的隐私。Evolournal 收集的所有数据仅用于改善应用体验，不会与第三方分享您的个人信息。详细的隐私政策请查看应用内的相关页面。</p>
-        </div>
-        
-        <div class="content">
-            <h2>🔄 版本更新</h2>
-            <p>我们定期更新应用以修复问题和添加新功能。请确保您使用的是最新版本的 Evolournal 以获得最佳体验。</p>
-        </div>
-        
-        <div class="footer">
-            <p>&copy; 2024 Evolournal. 保留所有权利。</p>
-            <p>感谢您选择 Evolournal，让我们一起记录美好生活！</p>
+
+        <!-- Chinese Content -->
+        <div id="content-zh" class="lang-content">
+            <div class="header">
+                <div class="logo">E</div>
+                <h1>Evolournal</h1>
+                <p class="subtitle">智能日记应用 - 技术支持</p>
+            </div>
+            
+            <div class="content">
+                <h2>📱 关于 Evolournal</h2>
+                <p>Evolournal 是一款智能日记应用，帮助用户记录生活点滴，追踪情绪变化，并通过智能分析提供个人成长洞察。我们致力于为用户提供最佳的日记记录体验。</p>
+            </div>
+            
+            <div class="content">
+                <h2>❓ 常见问题</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">如何开始使用 Evolournal？</div>
+                    <div class="faq-answer">下载应用后，您可以直接开始写日记。应用会引导您完成初始设置，包括选择主题和设置提醒。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">我的数据安全吗？</div>
+                    <div class="faq-answer">是的，我们非常重视您的隐私。所有日记数据都存储在您的设备上，并可选择性地同步到您的 iCloud 账户。我们不会访问或存储您的个人日记内容。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">如何备份我的日记？</div>
+                    <div class="faq-answer">应用支持 iCloud 自动备份。您也可以在设置中手动导出日记数据。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">应用支持哪些设备？</div>
+                    <div class="faq-answer">Evolournal 支持 iOS 15.0 及以上版本的 iPhone 和 iPad。</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">如何联系技术支持？</div>
+                    <div class="faq-answer">您可以通过下方的联系方式与我们取得联系，我们会在24小时内回复您的问题。</div>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h2>📞 联系我们</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <h3>邮箱支持</h3>
+                        <p>nataliexx07@163.com</p>
+                        <a href="mailto:nataliexx07@163.com" class="btn">发送邮件</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <h3>在线反馈</h3>
+                        <p>通过应用内反馈功能</p>
+                        <a href="#" class="btn">应用内反馈</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h2>📋 隐私政策</h2>
+                <p>我们承诺保护您的隐私。Evolournal 收集的所有数据仅用于改善应用体验，不会与第三方分享您的个人信息。详细的隐私政策请查看应用内的相关页面。</p>
+            </div>
+            
+            <div class="content">
+                <h2>🔄 版本更新</h2>
+                <p>我们定期更新应用以修复问题和添加新功能。请确保您使用的是最新版本的 Evolournal 以获得最佳体验。</p>
+            </div>
+            
+            <div class="footer">
+                <p>&copy; 2024 Evolournal. 保留所有权利。</p>
+                <p>感谢您选择 Evolournal，让我们一起记录美好生活！</p>
+            </div>
         </div>
     </div>
+
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.language-switcher button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected language content
+            document.getElementById('content-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+            
+            // Update page language attribute
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            
+            // Update page title
+            document.title = lang === 'zh' ? 'Evolournal - 技术支持' : 'Evolournal - Technical Support';
+            
+            // Save language preference
+            localStorage.setItem('preferred-language', lang);
+        }
+        
+        // Load saved language preference or default to English
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferred-language') || 'en';
+            switchLanguage(savedLang);
+        });
+    </script>
 </body>
 </html> 
