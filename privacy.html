@@ -14,140 +14,148 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #1d1d1f;
+            background: #ffffff;
             min-height: 100vh;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 980px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 48px 20px;
         }
         
         .language-switcher {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 24px;
+            right: 24px;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 25px;
-            padding: 8px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            background: #f5f5f7;
+            border-radius: 20px;
+            padding: 4px;
+            border: 1px solid #d2d2d7;
         }
         
         .language-switcher button {
             background: none;
             border: none;
             padding: 8px 16px;
-            border-radius: 20px;
+            border-radius: 16px;
             cursor: pointer;
             font-size: 14px;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            font-weight: 400;
+            color: #1d1d1f;
+            transition: all 0.2s ease;
         }
         
         .language-switcher button.active {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
+            background: #1d1d1f;
+            color: #ffffff;
         }
         
         .language-switcher button:hover:not(.active) {
-            background: rgba(102, 126, 234, 0.1);
+            background: #e8e8ed;
         }
         
         .header {
             text-align: center;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px 20px;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-        
-        .logo {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border-radius: 20px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            color: white;
-            font-weight: bold;
+            padding: 40px 0 60px;
+            border-bottom: 1px solid #d2d2d7;
+            margin-bottom: 48px;
         }
         
         h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 2.5em;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -0.003em;
         }
         
         .subtitle {
-            color: #666;
-            font-size: 1.2em;
+            color: #86868b;
+            font-size: 21px;
+            font-weight: 400;
         }
         
         .content {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            max-width: 820px;
+            margin: 0 auto;
         }
         
         h2 {
-            color: #333;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
+            color: #1d1d1f;
+            margin: 48px 0 24px;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.005em;
         }
         
         h3 {
-            color: #333;
-            margin: 20px 0 10px 0;
-            font-size: 1.2em;
+            color: #1d1d1f;
+            margin: 32px 0 16px;
+            font-size: 24px;
+            font-weight: 600;
         }
         
         p {
-            margin-bottom: 15px;
-            color: #666;
+            margin-bottom: 16px;
+            color: #1d1d1f;
+            font-size: 17px;
+            line-height: 1.47059;
         }
         
         ul {
-            margin: 15px 0;
-            padding-left: 20px;
+            margin: 16px 0;
+            padding-left: 24px;
         }
         
         li {
             margin-bottom: 8px;
-            color: #666;
+            color: #1d1d1f;
+            font-size: 17px;
+            line-height: 1.47059;
         }
         
-        .back-link {
-            display: inline-block;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 25px;
-            margin: 20px 0;
-            transition: transform 0.3s ease;
+        .effective-date {
+            background: #f5f5f7;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            font-size: 17px;
         }
         
-        .back-link:hover {
-            transform: translateY(-2px);
-        }
+                 .highlight-box {
+             background: #f5f5f7;
+             padding: 24px;
+             border-radius: 12px;
+             margin: 24px 0;
+             border-left: 4px solid #ff6b35;
+         }
+        
+                 .back-link {
+             display: inline-block;
+             background: #ff6b35;
+             color: white;
+             padding: 12px 24px;
+             text-decoration: none;
+             border-radius: 980px;
+             margin: 48px 0;
+             font-weight: 400;
+             transition: background-color 0.2s ease;
+         }
+         
+         .back-link:hover {
+             background: #e55a2b;
+         }
         
         .footer {
             text-align: center;
-            color: rgba(255, 255, 255, 0.8);
-            margin-top: 30px;
+            color: #86868b;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #d2d2d7;
+            font-size: 17px;
         }
         
         .lang-content {
@@ -158,41 +166,41 @@
             display: block;
         }
         
-        .effective-date {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-            margin-bottom: 20px;
+        strong {
+            font-weight: 600;
         }
         
-        .highlight-box {
-            background: #e8f4fd;
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid #2196F3;
-            margin: 15px 0;
+        em {
+            font-style: italic;
+            color: #86868b;
         }
         
-        @media (max-width: 600px) {
+        @media (max-width: 734px) {
             .container {
-                padding: 10px;
+                padding: 24px 16px;
             }
             
             h1 {
-                font-size: 2em;
+                font-size: 40px;
             }
             
-            .content {
-                padding: 20px;
+            h2 {
+                font-size: 28px;
+            }
+            
+            h3 {
+                font-size: 21px;
             }
             
             .language-switcher {
-                position: relative;
-                top: auto;
-                right: auto;
-                margin-bottom: 20px;
+                position: static;
+                margin-bottom: 24px;
                 text-align: center;
+            }
+            
+            .header {
+                padding: 24px 0 40px;
+                margin-bottom: 32px;
             }
         }
     </style>
@@ -207,129 +215,120 @@
         <!-- English Content -->
         <div id="content-en" class="lang-content active">
             <div class="header">
-                <div class="logo">E</div>
-                <h1>Evolournal</h1>
-                <p class="subtitle">Privacy Policy</p>
+                <h1>Privacy Policy</h1>
+                <p class="subtitle">Evolournal</p>
             </div>
             
             <div class="content">
                 <div class="effective-date">
-                    <strong>Effective Date:</strong> June 2025<br>
-                    <strong>Last Updated:</strong> June 2025
+                    <strong>Effective Date:</strong> July 17, 2025<br>
+                    <strong>Last Updated:</strong> July 17, 2025
                 </div>
                 
-                <h2>Privacy Policy</h2>
                 <p>This Privacy Policy describes how Evolournal ("we," "our," or "us") collects, uses, and protects your information when you use our mobile application. We are committed to protecting your privacy and ensuring your journal entries remain private.</p>
                 
                 <div class="highlight-box">
                     <strong>Key Privacy Principles:</strong><br>
-                    • Your journal entries are stored locally on your device<br>
+                    • Your journal entries are stored locally on your device or in your iCloud<br>
                     • We do not collect or access your personal journal content<br>
-                    • No third-party analytics or tracking tools are used<br>
+                    • Limited technical data is collected for app functionality and improvement<br>
                     • No social sharing or community features
                 </div>
                 
-                <h3>1. Information We Collect</h3>
+                <h2>1. Information We Collect</h2>
                 
-                <p><strong>1.1 Journal Content (Not Collected by Us):</strong></p>
+                <h3>1.1 Personal Content We Do NOT Collect</h3>
+                <p>We do not collect any of your personal content, including:</p>
                 <ul>
                     <li>Journal entries and text content you create</li>
+                    <li>Identity tags and personal labels</li>
+                    <li>Wishes and aspirations you record</li>
+                    <li>Role models and idols you add</li>
                     <li>Photos you add to your journal entries</li>
                     <li>User avatar/profile pictures you upload</li>
                 </ul>
-                <p><em>Note: All journal content is stored locally on your device. We do not have access to or collect your journal entries.</em></p>
+                <p><em>All personal content is stored locally on your device or in your iCloud account (when enabled) and is never transmitted to our servers.</em></p>
                 
-                <p><strong>1.2 Technical Information We May Collect:</strong></p>
+                <h3>1.2 Technical Data We Collect (9 Types)</h3>
+                <p>We collect the following types of technical data to improve app functionality and performance. This data is not linked to your personal identity:</p>
                 <ul>
-                    <li>Device information (model, iOS version) for crash reporting</li>
-                    <li>App usage statistics (app opens, feature usage) for improving functionality</li>
-                    <li>Crash reports and error logs to fix bugs and improve stability</li>
+                    <li><strong>User ID:</strong> Anonymous identifier for technical purposes</li>
+                    <li><strong>Device ID:</strong> Device identifier for crash reporting and diagnostics</li>
+                    <li><strong>Purchase History:</strong> In-app purchase records for feature activation</li>
+                    <li><strong>Product Interaction:</strong> How you use app features and navigation patterns</li>
+                    <li><strong>Other Usage Data:</strong> App session duration, feature usage frequency</li>
+                    <li><strong>Crash Data:</strong> Error reports when the app crashes</li>
+                    <li><strong>Performance Data:</strong> App loading times and responsiveness metrics</li>
+                    <li><strong>Other Diagnostic Data:</strong> Technical logs for troubleshooting</li>
+                    <li><strong>Handwriting Data:</strong> Anonymous handwriting patterns for input improvement (if applicable)</li>
                 </ul>
                 
-                <p><strong>1.3 Apple ID Information (For Sync Only):</strong></p>
-                <ul>
-                    <li>If you choose to enable iCloud sync, your Apple ID is used to sync data across your devices</li>
-                    <li>We do not collect or store your Apple ID information</li>
-                </ul>
-                
-                <h3>2. How We Use Your Information</h3>
-                <p>We use the limited technical information we collect to:</p>
-                <ul>
-                    <li>Provide and maintain the journaling service</li>
-                    <li>Fix bugs and improve app stability through crash reports</li>
-                    <li>Understand app usage patterns to improve user experience</li>
-                    <li>Provide customer support when you contact us</li>
-                </ul>
-                
-                <h3>3. Data Storage and Sync</h3>
-                
-                <p><strong>3.1 Local Storage:</strong></p>
-                <ul>
-                    <li>All your journal entries, photos, and personal content are stored locally on your device</li>
-                    <li>This data is not transmitted to our servers</li>
-                </ul>
-                
-                <p><strong>3.2 iCloud Sync (Optional):</strong></p>
+                <h3>1.3 iCloud Sync (Your Control)</h3>
                 <ul>
                     <li>If you enable iCloud sync, your journal data is stored in your personal iCloud account</li>
                     <li>This sync is handled entirely by Apple's iCloud service</li>
-                    <li>Your data remains under Apple's privacy policies and security measures</li>
-                    <li>You can disable iCloud sync at any time in the app settings</li>
+                    <li>We do not have access to your iCloud data</li>
                 </ul>
                 
-                <p><strong>3.3 Data Export:</strong></p>
+                <h2>2. How We Use Your Information</h2>
+                <p>We use the technical data we collect solely for:</p>
                 <ul>
-                    <li>You can export your journal data at any time</li>
-                    <li>Exported data remains under your control</li>
+                    <li>Software functionality analysis and improvement</li>
+                    <li>App maintenance and bug fixes</li>
+                    <li>Performance optimization</li>
+                    <li>Providing customer support when you contact us</li>
+                    <li>Enabling premium features for valid purchases</li>
                 </ul>
                 
-                <h3>4. What We Don't Do</h3>
-                <p>To protect your privacy, we explicitly do not:</p>
+                <h2>3. Data Storage and Security</h2>
+                
+                <h3>3.1 Local Storage</h3>
                 <ul>
-                    <li>Access, read, or analyze your journal entries</li>
-                    <li>Use third-party analytics tools (like Google Analytics)</li>
-                    <li>Share your data with advertisers (we don't show ads)</li>
-                    <li>Provide social sharing or community features</li>
-                    <li>Sell or trade your personal information</li>
-                    <li>Track your location or add location data to entries</li>
+                    <li>All your personal content is stored locally on your device</li>
+                    <li>This data is protected by your device's security features</li>
                 </ul>
                 
-                <h3>5. Future In-App Purchases</h3>
-                <p>We may introduce optional premium features in future updates. If we do:</p>
+                <h3>3.2 iCloud Sync (Optional)</h3>
                 <ul>
-                    <li>Purchase information will be handled by Apple's App Store</li>
-                    <li>We may collect basic purchase verification data to enable premium features</li>
-                    <li>No payment information is stored by us</li>
-                    <li>This policy will be updated to reflect any changes</li>
+                    <li>When enabled, your data syncs to your personal iCloud account</li>
+                    <li>Protected by Apple's security measures and privacy policies</li>
+                    <li>You can disable sync at any time in app settings</li>
                 </ul>
                 
-                <h3>6. Your Rights and Control</h3>
+                <h3>3.3 Data Export</h3>
+                <ul>
+                    <li>You can export your data at any time</li>
+                    <li>Exported data remains under your complete control</li>
+                </ul>
+                
+                <h2>4. Your Privacy Rights</h2>
                 <p>You have complete control over your data:</p>
                 <ul>
-                    <li>Access: View all your journal data within the app</li>
-                    <li>Export: Export your journal entries at any time</li>
-                    <li>Delete: Delete individual entries or all data</li>
-                    <li>Sync Control: Enable or disable iCloud sync</li>
-                    <li>App Removal: Uninstalling the app removes all local data</li>
+                    <li><strong>Access:</strong> View all your journal data within the app</li>
+                    <li><strong>Export:</strong> Export your journal entries at any time</li>
+                    <li><strong>Delete:</strong> Delete individual entries or all data</li>
+                    <li><strong>Sync Control:</strong> Enable or disable iCloud sync</li>
+                    <li><strong>App Removal:</strong> Uninstalling removes all local data</li>
                 </ul>
                 
-                <h3>7. Children's Privacy</h3>
-                <p>Our app is suitable for users of all ages (4+). We do not knowingly collect personal information from children under 13. Since journal content is stored locally and not transmitted to us, children's privacy is protected by design.</p>
+                <h2>5. Children's Privacy</h2>
+                <p>Our app is suitable for users of all ages (4+). We do not knowingly collect personal information from children under 13. Since personal content is stored locally and not transmitted to us, children's privacy is protected by design.</p>
                 
-                <h3>8. Security</h3>
-                <p>We implement security measures to protect the limited technical data we collect. Your journal content security depends on:</p>
+                <h2>6. Third Parties</h2>
+                <p>We do not:</p>
                 <ul>
-                    <li>Your device's security (passcode, Face ID, Touch ID)</li>
-                    <li>Apple's iCloud security (if sync is enabled)</li>
-                    <li>Your personal data management practices</li>
+                    <li>Share your data with advertisers</li>
+                    <li>Use third-party analytics tools that access personal content</li>
+                    <li>Sell or trade your information</li>
+                    <li>Provide social sharing features</li>
                 </ul>
                 
-                <h3>9. Changes to This Policy</h3>
-                <p>We may update this Privacy Policy to reflect changes in our practices or for legal reasons. We will notify you of significant changes through the app and update the "Last Updated" date above.</p>
+                <h2>7. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy occasionally. Significant changes will be communicated through the app, and the "Last Updated" date will be revised accordingly.</p>
                 
-                <h3>10. Contact Us</h3>
-                <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at:</p>
-                <p><strong>Email:</strong> margooo17@outlook.com</p>
+                <h2>8. Contact Us</h2>
+                <p>If you have questions about this Privacy Policy, please contact us at:</p>
+                <p><strong>Email:</strong> support@evolournal.com</p>
                 
                 <a href="index.html" class="back-link">← Back to Support</a>
             </div>
@@ -342,129 +341,120 @@
         <!-- Chinese Content -->
         <div id="content-zh" class="lang-content">
             <div class="header">
-                <div class="logo">E</div>
-                <h1>Evolournal</h1>
-                <p class="subtitle">隐私政策</p>
+                <h1>隐私政策</h1>
+                <p class="subtitle">Evolournal</p>
             </div>
             
             <div class="content">
                 <div class="effective-date">
-                    <strong>生效日期：</strong> 2025年1月<br>
-                    <strong>最后更新：</strong> 2025年1月
+                    <strong>生效日期：</strong> 2025年7月17日<br>
+                    <strong>最后更新：</strong> 2025年7月17日
                 </div>
                 
-                <h2>隐私政策</h2>
                 <p>本隐私政策描述了Evolournal（"我们"）在您使用我们的移动应用程序时如何收集、使用和保护您的信息。我们致力于保护您的隐私，确保您的日记条目保持私密。</p>
                 
                 <div class="highlight-box">
                     <strong>核心隐私原则：</strong><br>
-                    • 您的日记条目存储在您的设备本地<br>
+                    • 您的日记条目存储在您的设备本地或iCloud中<br>
                     • 我们不收集或访问您的个人日记内容<br>
-                    • 不使用第三方分析或跟踪工具<br>
+                    • 仅收集有限的技术数据用于应用功能和改进<br>
                     • 无社交分享或社区功能
                 </div>
                 
-                <h3>1. 我们收集的信息</h3>
+                <h2>1. 我们收集的信息</h2>
                 
-                <p><strong>1.1 日记内容（我们不收集）：</strong></p>
+                <h3>1.1 我们不收集的个人内容</h3>
+                <p>我们不收集您的任何个人内容，包括：</p>
                 <ul>
                     <li>您创建的日记条目和文本内容</li>
+                    <li>身份标签和个人标记</li>
+                    <li>您记录的心愿和愿望</li>
+                    <li>您添加的偶像和榜样</li>
                     <li>您添加到日记条目中的照片</li>
                     <li>您上传的用户头像/个人资料图片</li>
                 </ul>
-                <p><em>注意：所有日记内容都存储在您的设备本地。我们无法访问或收集您的日记条目。</em></p>
+                <p><em>所有个人内容都存储在您的设备本地或您的iCloud账户中（当启用时），绝不会传输到我们的服务器。</em></p>
                 
-                <p><strong>1.2 我们可能收集的技术信息：</strong></p>
+                <h3>1.2 我们收集的技术数据（9种类型）</h3>
+                <p>我们收集以下类型的技术数据以改进应用功能和性能。这些数据不会关联您的个人身份：</p>
                 <ul>
-                    <li>设备信息（型号、iOS版本）用于崩溃报告</li>
-                    <li>应用使用统计（应用打开次数、功能使用情况）用于改善功能</li>
-                    <li>崩溃报告和错误日志以修复错误并提高稳定性</li>
+                    <li><strong>用户ID：</strong> 用于技术目的的匿名标识符</li>
+                    <li><strong>设备ID：</strong> 用于崩溃报告和诊断的设备标识符</li>
+                    <li><strong>购买历史记录：</strong> 应用内购买记录用于功能激活</li>
+                    <li><strong>产品交互：</strong> 您如何使用应用功能和导航模式</li>
+                    <li><strong>其他使用数据：</strong> 应用会话时长、功能使用频率</li>
+                    <li><strong>崩溃数据：</strong> 应用崩溃时的错误报告</li>
+                    <li><strong>性能数据：</strong> 应用加载时间和响应性指标</li>
+                    <li><strong>其他诊断数据：</strong> 用于故障排除的技术日志</li>
+                    <li><strong>手写数据：</strong> 匿名手写模式用于输入改进（如适用）</li>
                 </ul>
                 
-                <p><strong>1.3 Apple ID信息（仅用于同步）：</strong></p>
-                <ul>
-                    <li>如果您选择启用iCloud同步，您的Apple ID用于在设备间同步数据</li>
-                    <li>我们不收集或存储您的Apple ID信息</li>
-                </ul>
-                
-                <h3>2. 我们如何使用您的信息</h3>
-                <p>我们使用收集的有限技术信息来：</p>
-                <ul>
-                    <li>提供和维护日记服务</li>
-                    <li>通过崩溃报告修复错误并提高应用稳定性</li>
-                    <li>了解应用使用模式以改善用户体验</li>
-                    <li>在您联系我们时提供客户支持</li>
-                </ul>
-                
-                <h3>3. 数据存储和同步</h3>
-                
-                <p><strong>3.1 本地存储：</strong></p>
-                <ul>
-                    <li>您的所有日记条目、照片和个人内容都存储在您的设备本地</li>
-                    <li>这些数据不会传输到我们的服务器</li>
-                </ul>
-                
-                <p><strong>3.2 iCloud同步（可选）：</strong></p>
+                <h3>1.3 iCloud同步（由您控制）</h3>
                 <ul>
                     <li>如果您启用iCloud同步，您的日记数据将存储在您的个人iCloud账户中</li>
                     <li>此同步完全由Apple的iCloud服务处理</li>
-                    <li>您的数据仍受Apple隐私政策和安全措施保护</li>
-                    <li>您可以随时在应用设置中禁用iCloud同步</li>
+                    <li>我们无法访问您的iCloud数据</li>
                 </ul>
                 
-                <p><strong>3.3 数据导出：</strong></p>
+                <h2>2. 我们如何使用您的信息</h2>
+                <p>我们使用收集的技术数据仅用于：</p>
                 <ul>
-                    <li>您可以随时导出您的日记数据</li>
-                    <li>导出的数据仍在您的控制之下</li>
+                    <li>软件功能分析和改进</li>
+                    <li>应用维护和错误修复</li>
+                    <li>性能优化</li>
+                    <li>在您联系我们时提供客户支持</li>
+                    <li>为有效购买启用高级功能</li>
                 </ul>
                 
-                <h3>4. 我们不做的事情</h3>
-                <p>为了保护您的隐私，我们明确不会：</p>
+                <h2>3. 数据存储和安全</h2>
+                
+                <h3>3.1 本地存储</h3>
                 <ul>
-                    <li>访问、阅读或分析您的日记条目</li>
-                    <li>使用第三方分析工具（如Google Analytics）</li>
-                    <li>与广告商分享您的数据（我们不显示广告）</li>
-                    <li>提供社交分享或社区功能</li>
-                    <li>出售或交易您的个人信息</li>
-                    <li>跟踪您的位置或向条目添加位置数据</li>
+                    <li>您的所有个人内容都存储在您的设备本地</li>
+                    <li>这些数据受到您设备安全功能的保护</li>
                 </ul>
                 
-                <h3>5. 未来的应用内购买</h3>
-                <p>我们可能在未来的更新中引入可选的高级功能。如果我们这样做：</p>
+                <h3>3.2 iCloud同步（可选）</h3>
                 <ul>
-                    <li>购买信息将由Apple的App Store处理</li>
-                    <li>我们可能收集基本的购买验证数据以启用高级功能</li>
-                    <li>我们不存储任何支付信息</li>
-                    <li>此政策将更新以反映任何变化</li>
+                    <li>启用时，您的数据同步到您的个人iCloud账户</li>
+                    <li>受Apple安全措施和隐私政策保护</li>
+                    <li>您可以随时在应用设置中禁用同步</li>
                 </ul>
                 
-                <h3>6. 您的权利和控制</h3>
+                <h3>3.3 数据导出</h3>
+                <ul>
+                    <li>您可以随时导出您的数据</li>
+                    <li>导出的数据仍在您的完全控制之下</li>
+                </ul>
+                
+                <h2>4. 您的隐私权利</h2>
                 <p>您对您的数据拥有完全控制权：</p>
                 <ul>
-                    <li>访问：在应用内查看您的所有日记数据</li>
-                    <li>导出：随时导出您的日记条目</li>
-                    <li>删除：删除单个条目或所有数据</li>
-                    <li>同步控制：启用或禁用iCloud同步</li>
-                    <li>应用移除：卸载应用会删除所有本地数据</li>
+                    <li><strong>访问：</strong> 在应用内查看您的所有日记数据</li>
+                    <li><strong>导出：</strong> 随时导出您的日记条目</li>
+                    <li><strong>删除：</strong> 删除单个条目或所有数据</li>
+                    <li><strong>同步控制：</strong> 启用或禁用iCloud同步</li>
+                    <li><strong>应用移除：</strong> 卸载应用会删除所有本地数据</li>
                 </ul>
                 
-                <h3>7. 儿童隐私</h3>
-                <p>我们的应用适合所有年龄段的用户（4+）。我们不会故意收集13岁以下儿童的个人信息。由于日记内容存储在本地且不传输给我们，儿童的隐私在设计上就得到了保护。</p>
+                <h2>5. 儿童隐私</h2>
+                <p>我们的应用适合所有年龄段的用户（4+）。我们不会故意收集13岁以下儿童的个人信息。由于个人内容存储在本地且不传输给我们，儿童的隐私在设计上就得到了保护。</p>
                 
-                <h3>8. 安全性</h3>
-                <p>我们实施安全措施来保护我们收集的有限技术数据。您的日记内容安全取决于：</p>
+                <h2>6. 第三方</h2>
+                <p>我们不会：</p>
                 <ul>
-                    <li>您设备的安全性（密码、Face ID、Touch ID）</li>
-                    <li>Apple的iCloud安全性（如果启用同步）</li>
-                    <li>您的个人数据管理实践</li>
+                    <li>与广告商分享您的数据</li>
+                    <li>使用访问个人内容的第三方分析工具</li>
+                    <li>出售或交易您的信息</li>
+                    <li>提供社交分享功能</li>
                 </ul>
                 
-                <h3>9. 政策变更</h3>
-                <p>我们可能会更新此隐私政策以反映我们实践中的变化或法律原因。我们将通过应用通知您重大变更，并更新上述"最后更新"日期。</p>
+                <h2>7. 政策变更</h2>
+                <p>我们可能会偶尔更新此隐私政策。重大变更将通过应用传达，并相应修订"最后更新"日期。</p>
                 
-                <h3>10. 联系我们</h3>
-                <p>如果您对此隐私政策或我们的隐私实践有任何问题，请通过以下方式联系我们：</p>
-                <p><strong>邮箱：</strong> margooo17@outlook.com</p>
+                <h2>8. 联系我们</h2>
+                <p>如果您对此隐私政策有疑问，请通过以下方式联系我们：</p>
+                <p><strong>邮箱：</strong> support@evolournal.com</p>
                 
                 <a href="index.html" class="back-link">← 返回支持页面</a>
             </div>
